@@ -13,10 +13,20 @@
                             <div class="form-group">
                                 <label for="employeeNo">社員番号</label>
                                 <input type="text" class="form-control" id="employeeNo" name="employee_no" placeholder="123456789">
+                                @if ($errors->has('employee_no'))
+                                    <div class="alert alert-danger">
+                                        {{ $errors->first('employee_no') }}
+                                    </div>
+                                @endif
                             </div>
                             <div class="form-group">
                                 <label for="name">氏名</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="山田花子">
+                                @if ($errors->has('name'))
+                                    <div class="alert alert-danger">
+                                        {{ $errors->first('name') }}
+                                    </div>
+                                @endif
                             </div>
                             <button type="submit" class="btn btn-primary">登録</button>
                         </form>

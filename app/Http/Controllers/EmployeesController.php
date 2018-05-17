@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Employee;
+use App\Http\Requests\EmployeeCreateRequest;
 
 class EmployeesController extends Controller
 {
@@ -12,7 +13,7 @@ class EmployeesController extends Controller
         return view('employees.edit');
     }
 
-    public function create(Request $request)
+    public function create(EmployeeCreateRequest $request)
     {
         $employee = Employee::create([
             'employee_no' => $request->employee_no,
