@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // 社員管理
 Route::get('/employees/new', 'EmployeesController@new')->name('employees.new');
+Route::post('/employees/create', 'EmployeesController@create')->name('employees.create');
