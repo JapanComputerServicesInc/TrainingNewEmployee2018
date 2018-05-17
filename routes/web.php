@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// 社員管理
+Route::get('/employees/new', 'EmployeesController@new')->name('employees.new');

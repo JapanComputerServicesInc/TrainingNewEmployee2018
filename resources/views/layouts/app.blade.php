@@ -40,7 +40,7 @@
                                     社員管理 <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownEmployee">
-                                    <a class="dropdown-item" href="{{ route('logout') }}">新規登録</a>
+                                    <a class="dropdown-item" href="{{ route('employees.new') }}">新規登録</a>
                                 </div>
 
                             </li>
