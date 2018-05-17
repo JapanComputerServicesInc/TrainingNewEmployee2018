@@ -17,7 +17,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="employeeNo">社員番号</label>
-                                <input type="text" class="form-control" id="employeeNo" name="employee_no" placeholder="123456789"
+                                <input type="number" class="form-control" id="employeeNo" name="employee_no" placeholder="123456789"
                                     value="{{ old('employee_no', $employee->employee_no) }}" required>
                                 @if ($errors->has('employee_no'))
                                     <div class="alert alert-danger">
