@@ -25,8 +25,7 @@ class EmployeeUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'employee_no' => 'required',
-            'name' => 'required'
+            'name' => 'required|max:50'
         ];
     }
 }

@@ -12,22 +12,22 @@
                             @csrf
                             <div class="form-group">
                                 <label for="employeeNo">社員番号</label>
-                                <input type="number" class="form-control" id="employeeNo" name="employee_no" placeholder="123456789"
+                                <input type="number" class="form-control{{ $errors->has('employee_no') ? ' is-invalid' : '' }}" id="employeeNo" name="employee_no" placeholder="123456789"
                                     value="{{ old('employee_no') }}" required>
                                 @if ($errors->has('employee_no'))
-                                    <div class="alert alert-danger">
-                                        {{ $errors->first('employee_no') }}
-                                    </div>
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('employee_no') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                             <div class="form-group">
                                 <label for="name">氏名</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="山田花子"
+                                <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" placeholder="山田花子"
                                     value="{{ old('name') }}" required>
                                 @if ($errors->has('name'))
-                                    <div class="alert alert-danger">
-                                        {{ $errors->first('name') }}
-                                    </div>
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                             <button type="submit" class="btn btn-primary">登録</button>
