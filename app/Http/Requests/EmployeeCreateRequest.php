@@ -25,7 +25,7 @@ class EmployeeCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'employee_no' => 'required|digits:8|unique:employees,employee_no',
+            'employee_no' => 'required|digits:8|unique:employees,employee_no|min:10000000',
             'name' => 'required|max:50'
         ];
     }
