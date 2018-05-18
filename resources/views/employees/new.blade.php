@@ -14,6 +14,7 @@
                                 <label for="employeeNo">社員番号</label>
                                 <input type="number" class="form-control{{ $errors->has('employee_no') ? ' is-invalid' : '' }}" id="employeeNo" name="employee_no" placeholder="123456789"
                                     value="{{ old('employee_no') }}" required>
+                                <small class="form-text text-muted">8桁で入力して下さい。</small>
                                 @if ($errors->has('employee_no'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('employee_no') }}</strong>
@@ -24,6 +25,7 @@
                                 <label for="name">氏名</label>
                                 <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" placeholder="山田花子"
                                     value="{{ old('name') }}" required>
+                                <small class="form-text text-muted">50文字以内で入力して下さい。</small>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>

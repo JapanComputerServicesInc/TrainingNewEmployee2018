@@ -19,6 +19,7 @@
                                 <label for="name">氏名</label>
                                 <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" placeholder="山田花子"
                                        value="{{ old('name', $employee->name) }}" required>
+                                <small class="form-text text-muted">50文字以内で入力して下さい。</small>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
