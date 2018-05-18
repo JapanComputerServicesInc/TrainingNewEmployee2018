@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use Illuminate\Http\Request;
 use App\Http\Requests\EmployeeCreateRequest;
 use App\Http\Requests\EmployeeUpdateRequest;
 
@@ -68,5 +69,21 @@ class EmployeesController extends Controller
         $request->session()->flash('success_message', '更新が完了しました。');
 
         return redirect()->route('employees.edit', ['id' => $employee->id]);
+    }
+
+    /**
+     * 削除
+     * @param Request $request
+     * @param Employee $employee
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
+    public function destroy(Request $request, Employee $employee)
+    {
+        $employee->delete();
+
+        $request->session()->flash('success_message', '削除が完了しました。');
+
+        return redirect()->route('employees.index');
     }
 }

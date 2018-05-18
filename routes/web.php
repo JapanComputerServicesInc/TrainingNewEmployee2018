@@ -20,8 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // 社員管理
-Route::get('/employees', 'EmployeesController@index')->name('employees.index');
-Route::get('/employees/new', 'EmployeesController@new')->name('employees.new');
-Route::post('/employees/create', 'EmployeesController@create')->name('employees.create');
-Route::get('/employees/edit/{employee}', 'EmployeesController@edit')->name('employees.edit');
-Route::post('/employees/update/{employee}', 'EmployeesController@update')->name('employees.update');
+Route::name('employees.')->group(function () {
+    Route::get('/employees', 'EmployeesController@index')->name('index');
+    Route::get('/employees/new', 'EmployeesController@new')->name('new');
+    Route::post('/employees', 'EmployeesController@create')->name('create');
+    Route::get('/employees/edit/{employee}', 'EmployeesController@edit')->name('edit');
+    Route::patch('/employees/{employee}', 'EmployeesController@update')->name('update');
+    Route::delete('/employees/{employee}', 'EmployeesController@destroy')->name('destroy');
+});

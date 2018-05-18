@@ -8,13 +8,9 @@
                     <div class="card-header">社員情報編集</div>
 
                     <div class="card-body">
-                        @if (Session::has('success_message'))
-                            <div class="alert alert-success">
-                                {{ Session::get('success_message') }}
-                            </div>
-                        @endif
                         <form method="POST" action="{{ route('employees.update', ['employee' => $employee]) }}">
                             @csrf
+                            @method('PATCH')
                             <div class="form-group">
                                 <label for="employeeNo">社員番号</label>
                                 <p>{{ $employee->employee_no }}</p>
@@ -30,6 +26,14 @@
                                 @endif
                             </div>
                             <button type="submit" class="btn btn-primary">更新</button>
+                            <button type="button" class="btn btn-danger text-right" style="float: right;"
+                                onclick="if (confirm('削除しますか？')) document.getElementById('delete-form').submit()">
+                                削除
+                            </button>
+                        </form>
+                        <form id="delete-form" method="POST" action="{{ route('employees.destroy', ['employee' => $employee]) }}">
+                            @csrf
+                            @method('DELETE')
                         </form>
                     </div>
                 </div>
