@@ -26,14 +26,13 @@
                                 @endif
                             </div>
                             <button type="submit" class="btn btn-primary">更新</button>
-                            <button type="button" class="btn btn-danger text-right" style="float: right;"
-                                onclick="if (confirm('削除しますか？')) document.getElementById('delete-form').submit()">
-                                削除
-                            </button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#deleteModal" style="float: right;">削除</button>
                         </form>
                         <form id="delete-form" method="POST" action="{{ route('employees.destroy', ['employee' => $employee]) }}">
                             @csrf
                             @method('DELETE')
+                            @include('employees._delete_model')
                         </form>
                     </div>
                 </div>
