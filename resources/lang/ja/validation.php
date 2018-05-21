@@ -128,6 +128,7 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'minimum-intval' => '社員番号は10000000以上で入力して下さい。'
     ],
 
     /*

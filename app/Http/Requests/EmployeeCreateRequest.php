@@ -25,7 +25,11 @@ class EmployeeCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'employee_no' => 'required|digits:8|unique:employees,employee_no|min:10000000',
+            'employee_no' => ['required', 'digits:8', 'unique:employees,employee_no', function ($attribute, $value, $fail) {
+                if (intval($value) < 10000000) {
+                    return $fail(trans('validation.custom.minimum-intval'));
+                }
+            }],
             'name' => 'required|max:50'
         ];
     }
