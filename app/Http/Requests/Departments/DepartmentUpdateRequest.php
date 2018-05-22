@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Departments;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Auth;
 
-class EmployeeCreateRequest extends FormRequest
+class DepartmentUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,11 +25,6 @@ class EmployeeCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'employee_no' => ['required', 'digits:8', 'unique:employees,employee_no', function ($attribute, $value, $fail) {
-                if (intval($value) < 10000000) {
-                    return $fail(trans('validation.custom.minimum-intval'));
-                }
-            }],
             'name' => 'required|max:50'
         ];
     }

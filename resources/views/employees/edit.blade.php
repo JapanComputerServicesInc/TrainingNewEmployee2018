@@ -10,7 +10,7 @@
                     <div class="card-header">社員情報編集</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('employees.update', ['employee' => $employee]) }}">
+                        <form method="POST" action="{{ route('employees.update', ['employee' => $employee->id]) }}">
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
@@ -27,6 +27,17 @@
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="departmentId">所属部署</label>
+                                <select class="form-control" id="departmentId" name="department_id">
+                                    @foreach ($departments as $department)
+                                        <option value="{{ $department->id }}"
+                                            @if ($department->id === $employee->department->id) selected @endif>
+                                            {{ $department->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary">更新</button>
                             <button type="button" class="btn btn-danger" data-toggle="modal"

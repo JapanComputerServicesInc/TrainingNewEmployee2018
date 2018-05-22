@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Departments;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Auth;
 
-class EmployeeUpdateRequest extends FormRequest
+class DepartmentCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

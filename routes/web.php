@@ -28,3 +28,13 @@ Route::name('employees.')->group(function () {
     Route::patch('/employees/{employee}', 'EmployeesController@update')->name('update');
     Route::delete('/employees/{employee}', 'EmployeesController@destroy')->name('destroy');
 });
+
+// 部門管理
+Route::name('departments.')->group(function () {
+    Route::get('/departments', 'DepartmentsController@index')->name('index');
+    Route::get('/departments/new', 'DepartmentsController@new')->name('new');
+    Route::post('/departments', 'DepartmentsController@create')->name('create');
+    Route::get('/departments/edit/{department}', 'DepartmentsController@edit')->name('edit');
+    Route::patch('/departments/{department}', 'DepartmentsController@update')->name('update');
+    Route::delete('/departments/{department}', 'DepartmentsController@destroy')->name('destroy');
+});

@@ -7,39 +7,35 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">社員一覧</div>
+                    <div class="card-header">部門一覧</div>
 
                     <div class="card-body">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>社員番号</th>
-                                    <th>氏名</th>
-                                    <th>所属部門</th>
+                                    <th>部門名</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse($employees as $employee)
+                                @forelse($departments as $department)
                                     <tr>
-                                        <td>
-                                            <a href="{{ route('employees.edit', ['employee' => $employee->id]) }}">{{ $employee->id }}</a>
-                                        </td>
-                                        <td>{{ $employee->employee_no }}</td>
-                                        <td>{{ $employee->name }}</td>
-                                        <td>{{ $employee->department->name }}</td>
+                                        <th>
+                                            <a href="{{ route('departments.edit', ['department' => $department->id]) }}">{{ $department->id }}</a>
+                                        </th>
+                                        <th>{{ $department->name }}</th>
                                     </tr>
                                 @empty
                                     <tr>
                                         <td colspan="3">
-                                            登録されている社員はいません。
+                                            登録されている部門はありません。
                                         </td>
                                     </tr>
                                 @endforelse
                                 <tr></tr>
                             </tbody>
                         </table>
-                        {{ $employees->links() }}
+                        {{ $departments->links() }}
                     </div>
                 </div>
             </div>

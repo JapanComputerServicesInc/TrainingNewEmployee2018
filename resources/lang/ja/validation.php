@@ -128,7 +128,8 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
-        'minimum-intval' => '社員番号は10000000以上で入力して下さい。'
+        'minimum-intval' => '社員番号は10000000以上で入力して下さい。',
+        'exists-department-id-in-employee' => '対象の部門に設定されている社員がいます。設定されている社員がいる間は削除出来ません。'
     ],
 
     /*

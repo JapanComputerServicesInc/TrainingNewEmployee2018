@@ -34,6 +34,14 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="form-group">
+                                <label for="departmentId">所属部署</label>
+                                <select class="form-control" id="departmentId" name="department_id">
+                                    @foreach ($departments as $department)
+                                        <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary">登録</button>
                         </form>
                     </div>

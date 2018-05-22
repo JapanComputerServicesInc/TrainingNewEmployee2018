@@ -27,8 +27,8 @@
                                 部門管理 <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownEmployee">
-                                <a class="dropdown-item" href="{{ route('employees.index') }}">一覧</a>
-                                <a class="dropdown-item" href="{{ route('employees.new') }}">新規登録</a>
+                                <a class="dropdown-item" href="{{ route('departments.index') }}">一覧</a>
+                                <a class="dropdown-item" href="{{ route('departments.new') }}">新規登録</a>
                             </div>
 
                         </li>

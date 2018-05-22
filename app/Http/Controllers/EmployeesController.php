@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Department;
 use App\Employee;
 use Illuminate\Http\Request;
-use App\Http\Requests\EmployeeCreateRequest;
-use App\Http\Requests\EmployeeUpdateRequest;
+use App\Http\Requests\Employees\EmployeeCreateRequest;
+use App\Http\Requests\Employees\EmployeeUpdateRequest;
 
 class EmployeesController extends Controller
 {
@@ -15,7 +16,7 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-        $employees = Employee::paginate(10);
+        $employees = Employee::with('department')->paginate(10);
 
         return view('employees.index')->with(['employees' => $employees]);
     }
@@ -26,7 +27,9 @@ class EmployeesController extends Controller
      */
     public function new()
     {
-        return view('employees.new');
+        $departments = Department::all();
+
+        return view('employees.new')->with(['departments' => $departments]);
     }
 
     /**
@@ -38,7 +41,8 @@ class EmployeesController extends Controller
     {
         $employee = Employee::create([
             'employee_no' => $request->employee_no,
-            'name' => $request->name
+            'name' => $request->name,
+            'department_id' => $request->department_id
         ]);
 
         $request->session()->flash('success_message', '登録が完了しました。');
@@ -53,7 +57,9 @@ class EmployeesController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('employees.edit')->with(['employee' => $employee]);
+        $departments = Department::all();
+
+        return view('employees.edit')->with(['employee' => $employee, 'departments' => $departments]);
     }
 
     /**
@@ -64,7 +70,10 @@ class EmployeesController extends Controller
      */
     public function update(EmployeeUpdateRequest $request, Employee $employee)
     {
-        $employee->update(['name' => $request->name]);
+        $employee->update([
+            'name' => $request->name,
+            'department_id' => $request->department_id
+        ]);
 
         $request->session()->flash('success_message', '更新が完了しました。');
 
