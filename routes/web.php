@@ -24,7 +24,7 @@ Route::name('employees.')->group(function () {
     Route::get('/employees', 'EmployeesController@index')->name('index');
     Route::get('/employees/new', 'EmployeesController@new')->name('new');
     Route::post('/employees', 'EmployeesController@create')->name('create');
-    Route::get('/employees/edit/{employee}', 'EmployeesController@edit')->name('edit');
+    Route::get('/employees/{employee}/edit', 'EmployeesController@edit')->name('edit');
     Route::patch('/employees/{employee}', 'EmployeesController@update')->name('update');
     Route::delete('/employees/{employee}', 'EmployeesController@destroy')->name('destroy');
 });
@@ -34,7 +34,7 @@ Route::name('departments.')->group(function () {
     Route::get('/departments', 'DepartmentsController@index')->name('index');
     Route::get('/departments/new', 'DepartmentsController@new')->name('new');
     Route::post('/departments', 'DepartmentsController@create')->name('create');
-    Route::get('/departments/edit/{department}', 'DepartmentsController@edit')->name('edit');
+    Route::get('/departments/{department}/edit', 'DepartmentsController@edit')->name('edit');
     Route::patch('/departments/{department}', 'DepartmentsController@update')->name('update');
     Route::delete('/departments/{department}', 'DepartmentsController@destroy')->name('destroy');
 });
