@@ -49,7 +49,7 @@ return [
         'array'   => 'The :attribute must have more than :value items.',
     ],
     'gte'                  => [
-        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'numeric' => ':attribute は :value 以上の値で入力して下さい。',
         'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
         'string'  => 'The :attribute must be greater than or equal :value characters.',
         'array'   => 'The :attribute must have :value items or more.',
