@@ -1,0 +1,34 @@
+version: '2'
+services:
+  training-app:
+    container_name: training-app
+    build: ./docker-compose/training-app
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - app_network
+    volumes:
+      - ./:/var/www/html
+      - ./docker-compose/training-app/log/nginx:/var/log/nginx
+      - ./docker-compose/training-app/log/php-fpm:/var/log/php-fpm
+    working_dir: "/var/www/html"
+    environment:
+      TZ: "Asia/Tokyo"
+    command: /sbin/init
+    privileged: true
+  training-app-db:
+    container_name: training-app-db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: "Asia/Tokyo"
+    ports:
+      - 3306:3306
+    networks:
+      - app_network
+    volumes:
+      - ./docker-compose/db:/var/lib/mysql
+    privileged: true
+networks:
+  app_network:
