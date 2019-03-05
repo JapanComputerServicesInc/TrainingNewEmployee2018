@@ -1,0 +1,78 @@
+[18-Jul-2018 01:31:51] NOTICE: fpm is running, pid 55
+[18-Jul-2018 01:31:51] NOTICE: ready to handle connections
+[18-Jul-2018 01:31:51] NOTICE: systemd monitor interval set to 10000ms
+[18-Jul-2018 01:55:34] NOTICE: Terminating ...
+[18-Jul-2018 01:55:34] NOTICE: exiting, bye-bye!
+[18-Jul-2018 01:55:34] NOTICE: fpm is running, pid 119
+[18-Jul-2018 01:55:34] NOTICE: ready to handle connections
+[18-Jul-2018 01:55:34] NOTICE: systemd monitor interval set to 10000ms
+[18-Jul-2018 04:05:54] NOTICE: fpm is running, pid 50
+[18-Jul-2018 04:05:54] NOTICE: ready to handle connections
+[18-Jul-2018 04:05:54] NOTICE: systemd monitor interval set to 10000ms
+[01-Aug-2018 05:22:29] NOTICE: fpm is running, pid 60
+[01-Aug-2018 05:22:29] NOTICE: ready to handle connections
+[01-Aug-2018 05:22:29] NOTICE: systemd monitor interval set to 10000ms
+[04-Aug-2018 07:36:41] NOTICE: fpm is running, pid 48
+[04-Aug-2018 07:36:41] NOTICE: ready to handle connections
+[04-Aug-2018 07:36:41] NOTICE: systemd monitor interval set to 10000ms
+[08-Aug-2018 10:18:43] NOTICE: fpm is running, pid 48
+[08-Aug-2018 10:18:43] NOTICE: ready to handle connections
+[08-Aug-2018 10:18:43] NOTICE: systemd monitor interval set to 10000ms
+[08-Aug-2018 11:38:20] NOTICE: fpm is running, pid 50
+[08-Aug-2018 11:38:20] NOTICE: ready to handle connections
+[08-Aug-2018 11:38:20] NOTICE: systemd monitor interval set to 10000ms
+[18-Aug-2018 03:14:19] NOTICE: fpm is running, pid 52
+[18-Aug-2018 03:14:19] NOTICE: ready to handle connections
+[18-Aug-2018 03:14:19] NOTICE: systemd monitor interval set to 10000ms
+[30-Aug-2018 05:54:12] NOTICE: fpm is running, pid 57
+[30-Aug-2018 05:54:12] NOTICE: ready to handle connections
+[30-Aug-2018 05:54:12] NOTICE: systemd monitor interval set to 10000ms
+[01-Sep-2018 22:12:36] NOTICE: fpm is running, pid 54
+[01-Sep-2018 22:12:36] NOTICE: ready to handle connections
+[01-Sep-2018 22:12:36] NOTICE: systemd monitor interval set to 10000ms
+[05-Sep-2018 11:53:24] NOTICE: fpm is running, pid 60
+[05-Sep-2018 11:53:24] NOTICE: ready to handle connections
+[05-Sep-2018 11:53:24] NOTICE: systemd monitor interval set to 10000ms
+[18-Sep-2018 08:45:27] NOTICE: fpm is running, pid 53
+[18-Sep-2018 08:45:27] NOTICE: ready to handle connections
+[18-Sep-2018 08:45:27] NOTICE: systemd monitor interval set to 10000ms
+[22-Sep-2018 03:13:40] NOTICE: Terminating ...
+[24-Sep-2018 06:32:42] NOTICE: fpm is running, pid 51
+[24-Sep-2018 06:32:42] NOTICE: ready to handle connections
+[24-Sep-2018 06:32:42] NOTICE: systemd monitor interval set to 10000ms
+[25-Sep-2018 02:25:10] NOTICE: fpm is running, pid 52
+[25-Sep-2018 02:25:10] NOTICE: ready to handle connections
+[25-Sep-2018 02:25:10] NOTICE: systemd monitor interval set to 10000ms
+[25-Sep-2018 03:46:51] NOTICE: fpm is running, pid 49
+[25-Sep-2018 03:46:51] NOTICE: ready to handle connections
+[25-Sep-2018 03:46:51] NOTICE: systemd monitor interval set to 10000ms
+[25-Sep-2018 03:56:51] NOTICE: fpm is running, pid 54
+[25-Sep-2018 03:56:51] NOTICE: ready to handle connections
+[25-Sep-2018 03:56:51] NOTICE: systemd monitor interval set to 10000ms
+[26-Sep-2018 14:06:52] NOTICE: fpm is running, pid 50
+[26-Sep-2018 14:06:52] NOTICE: ready to handle connections
+[26-Sep-2018 14:06:52] NOTICE: systemd monitor interval set to 10000ms
+[27-Sep-2018 07:59:26] NOTICE: fpm is running, pid 50
+[27-Sep-2018 07:59:26] NOTICE: ready to handle connections
+[27-Sep-2018 07:59:26] NOTICE: systemd monitor interval set to 10000ms
+[18-Oct-2018 02:41:17] NOTICE: fpm is running, pid 55
+[18-Oct-2018 02:41:17] NOTICE: ready to handle connections
+[18-Oct-2018 02:41:17] NOTICE: systemd monitor interval set to 10000ms
+[23-Oct-2018 01:20:01] NOTICE: fpm is running, pid 52
+[23-Oct-2018 01:20:01] NOTICE: ready to handle connections
+[23-Oct-2018 01:20:01] NOTICE: systemd monitor interval set to 10000ms
+[24-Oct-2018 06:32:54] NOTICE: fpm is running, pid 52
+[24-Oct-2018 06:32:54] NOTICE: ready to handle connections
+[24-Oct-2018 06:32:54] NOTICE: systemd monitor interval set to 10000ms
+[05-Nov-2018 13:20:36] NOTICE: fpm is running, pid 60
+[05-Nov-2018 13:20:36] NOTICE: ready to handle connections
+[05-Nov-2018 13:20:36] NOTICE: systemd monitor interval set to 10000ms
+[08-Nov-2018 03:23:02] NOTICE: fpm is running, pid 54
+[08-Nov-2018 03:23:02] NOTICE: ready to handle connections
+[08-Nov-2018 03:23:02] NOTICE: systemd monitor interval set to 10000ms
+[10-Nov-2018 04:58:42] NOTICE: fpm is running, pid 47
+[10-Nov-2018 04:58:42] NOTICE: ready to handle connections
+[10-Nov-2018 04:58:42] NOTICE: systemd monitor interval set to 10000ms
+[23-Nov-2018 06:31:08] NOTICE: fpm is running, pid 53
+[23-Nov-2018 06:31:08] NOTICE: ready to handle connections
+[23-Nov-2018 06:31:08] NOTICE: systemd monitor interval set to 10000ms
